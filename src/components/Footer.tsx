@@ -1,5 +1,6 @@
-import React from 'react';
-import { Flag, Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react';
+// import React from 'react';
+// import { Flag, Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react';
+import { Flag, Mail, MapPin, Phone } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -24,7 +25,7 @@ const Footer = () => {
               kedaulatan rakyat, dan cita-cita Indonesia yang sejahtera dan maju.
             </p>
 
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <a href="#" className="bg-gray-800 hover:bg-red-600 p-3 rounded-xl transition-colors duration-300 group">
                 <Instagram svgClass="w-5 h-5 text-gray-400 group-hover:text-white" />
               </a>
@@ -34,7 +35,7 @@ const Footer = () => {
               <a href="#" className="bg-gray-800 hover:bg-yellow-600 p-3 rounded-xl transition-colors duration-300 group">
                 <Mail svgClass="w-5 h-5 text-gray-400 group-hover:text-white" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -64,12 +65,12 @@ const Footer = () => {
               
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-yellow-500 flex-shrink-0" />
-                <p className="text-gray-400 text-sm">+62 812-3456-7890</p>
+                <p className="text-gray-400 text-sm">+62 853-4218-1132</p>
               </div>
               
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                <p className="text-gray-400 text-sm">hutri80@karema.id</p>
+                <p className="text-gray-400 text-sm">muhmakbul6@gmail.com</p>
               </div>
             </div>
           </div>
@@ -92,7 +93,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
             <p className="text-gray-500 text-sm">
-              © 2025 Pemuda RT III Karema Utara. Dirgahayu ke-80 Republik Indonesia!
+              © 2025 Muhammad Makbul N
             </p>
             
             <div className="flex items-center gap-4 text-xs text-gray-600">

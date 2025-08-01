@@ -1,7 +1,15 @@
-import React from 'react';
-import { Heart, DollarSign, Users, Gift, MessageCircle, HandHeart } from 'lucide-react';
+// import React from 'react';
+// import { Heart, DollarSign, Users, Gift, MessageCircle, HandHeart } from 'lucide-react';
+import { Heart, DollarSign, Users, Gift, MessageCircle } from 'lucide-react';
+import handleWA from '../utils/handleWa';
 
 const Support = () => {
+  const handleHubungiPanitia = () => {
+          const waUrl = handleWA();
+          window.open(waUrl, '_blank'); // Buka di tab baru
+          // Atau: window.location.href = waUrl; // Buka di tab yang sama
+      };
+
   return (
     <section className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4">
@@ -39,7 +47,7 @@ const Support = () => {
                 dan berbagai kebutuhan lainnya untuk membuat perayaan HUT RI ke-80 menjadi lebih meriah dan berkesan.
               </p>
 
-              {/* Donation Goals */}
+              {/* Donation Goals
               <div className="space-y-4 mb-8">
                 <div className="flex justify-between items-center text-sm">
                   <span className="text-gray-400">Target Donasi</span>
@@ -54,9 +62,9 @@ const Support = () => {
                   <span className="text-gray-400">Terkumpul: Rp 6.000.000</span>
                   <span className="text-green-400 font-semibold">60%</span>
                 </div>
-              </div>
+              </div> */}
 
-              <button className="w-full sm:w-auto bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-3">
+              <button className="w-full sm:w-auto bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-3" onClick={handleHubungiPanitia}>
                 <MessageCircle className="w-6 h-6" />
                 Donasi via WhatsApp
               </button>
@@ -64,7 +72,7 @@ const Support = () => {
 
             <div className="relative">
               <img 
-                src="https://images.pexels.com/photos/6152094/pexels-photo-6152094.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+                src="../../public/img/Documentation/bendera-panjat-pinang.webp"
                 alt="Community Support"
                 className="w-full h-80 object-cover rounded-2xl"
               />
@@ -87,9 +95,9 @@ const Support = () => {
             <p className="text-gray-400 text-sm mb-6">
               Kontribusi dana untuk mendukung berbagai kebutuhan acara seperti hadiah, dekorasi, dan konsumsi.
             </p>
-            <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition-colors duration-300">
+            {/* <button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-xl font-semibold transition-colors duration-300">
               Donasi Sekarang
-            </button>
+            </button> */}
           </div>
 
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 text-center hover:border-yellow-500/50 transition-all duration-300 group">
@@ -100,9 +108,9 @@ const Support = () => {
             <p className="text-gray-400 text-sm mb-6">
               Sumbangan berupa hadiah lomba, peralatan acara, atau barang lainnya yang mendukung acara.
             </p>
-            <button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded-xl font-semibold transition-colors duration-300">
+            {/* <button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded-xl font-semibold transition-colors duration-300">
               Hubungi Panitia
-            </button>
+            </button> */}
           </div>
 
           <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 text-center hover:border-blue-500/50 transition-all duration-300 group">
@@ -113,13 +121,13 @@ const Support = () => {
             <p className="text-gray-400 text-sm mb-6">
               Bergabunglah sebagai relawan untuk membantu persiapan dan pelaksanaan acara.
             </p>
-            <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition-colors duration-300">
+            {/* <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-semibold transition-colors duration-300">
               Daftar Volunteer
-            </button>
+            </button> */}
           </div>
         </div>
 
-        {/* Supporters Recognition */}
+        {/* Supporters Recognition
         <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -156,7 +164,7 @@ const Support = () => {
               Lihat Laporan Keuangan
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

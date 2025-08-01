@@ -1,37 +1,39 @@
-import React, { useState } from 'react';
-import { Camera, ChevronLeft, ChevronRight, Play, Heart } from 'lucide-react';
+import  { useState } from 'react';
+// import { Camera, ChevronLeft, ChevronRight, Play, Heart } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Documentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const photos = [
     {
-      url: "https://images.pexels.com/photos/8145143/pexels-photo-8145143.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "../../public/img/documentation/bendera-panjat-pinang.webp",
       title: "Upacara Bendera HUT RI ke-79",
-      description: "Momen khidmat upacara bendera tahun lalu"
+      description: "Momen khidmat pengibaran bendera tahun lalu"
     },
     {
-      url: "https://images.pexels.com/photos/8828786/pexels-photo-8828786.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "../../public/img/documentation/laut-panjat-pinang.webp",
       title: "Lomba Panjat Pinang",
-      description: "Antusiasme peserta dalam lomba tradisional"
+      description: "Antusiasme peserta dalam lomba panjat pinang"
     },
     {
-      url: "https://images.pexels.com/photos/3692471/pexels-photo-3692471.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "../../public/img/documentation/pemuda-karema.webp",
       title: "Kebersamaan Warga",
-      description: "Semangat gotong royong dalam persiapan acara"
+      // description: "Semangat gotong royong dalam persiapan acara"
+      description: "Pemuda Karema Utara berpartisipasi aktif"
     },
     {
-      url: "https://images.pexels.com/photos/1426718/pexels-photo-1426718.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "../../public/img/documentation/bendera-panjat-pinang.webp",
       title: "Hiburan Rakyat",
       description: "Pertunjukan seni budaya lokal yang memukau"
     },
     {
-      url: "https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "../../public/img/documentation/bendera-panjat-pinang.webp",
       title: "Pembagian Hadiah",
       description: "Momen bahagia para pemenang lomba"
     },
     {
-      url: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop",
+      url: "../../public/img/documentation/bendera-panjat-pinang.webp",
       title: "Penutupan Acara",
       description: "Doa bersama dan foto keluarga besar"
     }
@@ -130,7 +132,7 @@ const Documentation = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Call to Action
         <div className="text-center">
           <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-2xl p-8 border border-gray-600 max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-4">
@@ -178,7 +180,7 @@ const Documentation = () => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
