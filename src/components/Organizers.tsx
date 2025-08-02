@@ -1,7 +1,6 @@
-// import React from 'react';
-// import { User, Award, MapPin } from 'lucide-react';
 import { User } from 'lucide-react';
-import handleWA from '../utils/handleWa'; // Pastikan jalur impor sudah benar
+import { motion } from 'framer-motion';
+import handleWA from '../utils/handleWa';
 
 const Organizers = () => {
     const organizers = [
@@ -30,14 +29,19 @@ const Organizers = () => {
 
     const handleHubungiPanitia = () => {
         const waUrl = handleWA();
-        window.open(waUrl, '_blank'); // Buka di tab baru
-        // Atau: window.location.href = waUrl; // Buka di tab yang sama
+        window.open(waUrl, '_blank');
     };
 
     return (
-        <section className="py-20 bg-gray-800">
+        <section id='penanggung-jawab' className="py-20 bg-gray-800">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="text-center mb-16">
+                <motion.div
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: -30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                >
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                         Penanggung <span className="text-yellow-400">Jawab</span>
                     </h2>
@@ -45,15 +49,19 @@ const Organizers = () => {
                     <p className="text-gray-300 text-lg max-w-2xl mx-auto">
                         Tim yang bertanggung jawab atas suksesnya penyelenggaraan perayaan HUT RI ke-80 di RT III Karema Utara
                     </p>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {organizers.map((organizer, index) => {
                         const IconComponent = organizer.icon;
                         return (
-                            <div
+                            <motion.div
                                 key={index}
                                 className="group relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-gray-600 transition-all duration-300 hover:transform hover:scale-105"
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.1 * index, duration: 0.7 }}
+                                viewport={{ once: true }}
                             >
                                 <div className={`absolute inset-0 bg-gradient-to-br ${organizer.bgColor} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
                                 <div className="relative z-10">
@@ -71,30 +79,36 @@ const Organizers = () => {
                                 </div>
                                 <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-yellow-500/30 rounded-tr-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <div className="absolute bottom-4 left-4 w-8 h-8 border-b-2 border-l-2 border-red-500/30 rounded-bl-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>
 
-                <div className="text-center mt-16">
+                <motion.div
+                    className="text-center mt-16"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                    viewport={{ once: true }}
+                >
                     <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 border border-gray-700">
                         <h3 className="text-2xl font-bold text-white mb-4">Mari Bersama Sukseskan Acara Ini</h3>
                         <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
                             Dengan dukungan dan partisipasi aktif dari seluruh warga, mari kita wujudkan perayaan kemerdekaan yang meriah dan berkesan.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <button 
+                            <button
                                 className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-300"
                                 onClick={handleHubungiPanitia}
                             >
                                 Hubungi Panitia
                             </button>
-                            <button className="bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300">
+                            <button className="bg-transparent border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black px-6 py-3 rounded-xl font-semibold transition-all duration-300" onClick={() => window.open('https://drive.google.com/file/d/1KqeqMHgUYhMQ0YHt7SqWG6UnRv3ZE_DH/view?usp=sharing', '_blank')}>
                                 Info Lengkap
                             </button>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -11,17 +11,25 @@ const Hero = () => {
 
   useEffect(() => {
     const targetDate = new Date('2025-08-17T00:00:00');
-    
+
     const timer = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate.getTime() - now;
-      
+
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
           hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
           seconds: Math.floor((distance % (1000 * 60)) / 1000)
+        });
+      } else {
+        // Jika sudah lewat tanggalnya
+        setTimeLeft({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0
         });
       }
     }, 1000);
@@ -30,19 +38,18 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden pt-24 md:pt-8">
+    <section id="beranda"  className=" relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden pt-24 md:pt-8">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 ">
-        <img 
-          src="../../public/img/indonesia-flag.jpg"
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/img/indonesia-flag.jpg"
           alt="Indonesia Flag"
           className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-gray-900/60" />
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-        {/* Main Title */}
         <div className="mb-8">
           <h1 className="text-5xl md:text-8xl font-bold text-white mb-4 leading-tight">
             Peringatan
@@ -50,7 +57,7 @@ const Hero = () => {
               HUT RI ke-80
             </span>
           </h1>
-          <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto mb-6"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 mx-auto mb-6" />
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Bersatu Berdaulat Rakyat Sejahtera Indonesia Maju
           </p>
@@ -64,26 +71,14 @@ const Hero = () => {
               <div key={unit} className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
                 <div className="text-3xl md:text-4xl font-bold text-red-500 mb-2">{value}</div>
                 <div className="text-gray-400 text-sm uppercase tracking-wide">
-                  {unit === 'days' ? 'Hari' : 
-                   unit === 'hours' ? 'Jam' : 
-                   unit === 'minutes' ? 'Menit' : 'Detik'}
+                  {unit === 'days' ? 'Hari' :
+                    unit === 'hours' ? 'Jam' :
+                      unit === 'minutes' ? 'Menit' : 'Detik'}
                 </div>
               </div>
             ))}
           </div>
         </div>
-
-        {/* CTA Buttons
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="group bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center gap-3">
-            <Calendar className="w-5 h-5" />
-            Jadwal Acara
-          </button>
-          <button className="group bg-gradient-to-r from-yellow-500 to-yellow-600 hover:from-yellow-600 hover:to-yellow-700 text-black px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center gap-3">
-            <Users className="w-5 h-5" />
-            Dukung Kami
-          </button>
-        </div> */}
 
         {/* Quick Info */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
