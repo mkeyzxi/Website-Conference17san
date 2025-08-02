@@ -1,13 +1,13 @@
-import React from 'react';
-import Hero from './components/Hero';
-import About from './components/About';
-import Organizers from './components/Organizers';
-import Competitions from './components/Competitions';
-import Schedule from './components/Schedule';
-import Documentation from './components/Documentation';
-import Support from './components/Support';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import React from "react";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Organizers from "./components/Organizers";
+import Competitions from "./components/Competitions";
+import Schedule from "./components/Schedule";
+import Documentation from "./components/Documentation";
+import Support from "./components/Support";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 function App() {
   return (

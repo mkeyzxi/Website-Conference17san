@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion, Variants, Easing } from 'framer-motion';
-import { Flag, Heart, Star } from 'lucide-react';
+import React from "react";
+import { motion, Variants, Easing } from "framer-motion";
+import { Flag, Heart, Star } from "lucide-react";
 
 // Definisikan easing sebagai konstanta bertipe Easing
 const easeOutExpo: Easing = [0.25, 0.1, 0.25, 1];
@@ -27,21 +27,21 @@ const About: React.FC = () => {
   const nilaiNilai = [
     {
       icon: <Flag className="w-8 h-8 text-red-500" />,
-      title: 'Semangat Persatuan',
-      desc: 'Mempererat tali persaudaraan antar warga',
-      bg: 'bg-red-600/20',
+      title: "Semangat Persatuan",
+      desc: "Mempererat tali persaudaraan antar warga",
+      bg: "bg-red-600/20",
     },
     {
       icon: <Heart className="w-8 h-8 text-yellow-500" />,
-      title: 'Gotong Royong',
-      desc: 'Menjaga tradisi kebersamaan Indonesia',
-      bg: 'bg-yellow-600/20',
+      title: "Gotong Royong",
+      desc: "Menjaga tradisi kebersamaan Indonesia",
+      bg: "bg-yellow-600/20",
     },
     {
       icon: <Star className="w-8 h-8 text-blue-500" />,
-      title: 'Indonesia Maju',
-      desc: 'Optimisme untuk masa depan bangsa',
-      bg: 'bg-blue-600/20',
+      title: "Indonesia Maju",
+      desc: "Optimisme untuk masa depan bangsa",
+      bg: "bg-blue-600/20",
     },
   ];
 
@@ -72,12 +72,15 @@ const About: React.FC = () => {
           >
             <div className="prose prose-lg prose-invert">
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Peringatan HUT RI ke-80 tahun ini mengusung tema "Bersatu Berdaulat Rakyat Sejahtera Indonesia Maju"
-                sebagai refleksi semangat perjuangan para pahlawan yang telah mempersembahkan kemerdekaan bagi bangsa Indonesia.
+                Peringatan HUT RI ke-80 tahun ini mengusung tema "Bersatu
+                Berdaulat Rakyat Sejahtera Indonesia Maju" sebagai refleksi
+                semangat perjuangan para pahlawan yang telah mempersembahkan
+                kemerdekaan bagi bangsa Indonesia.
               </p>
               <p className="text-gray-300 text-lg leading-relaxed mb-8">
-                Acara ini bertujuan untuk mempererat tali persaudaraan, melestarikan nilai-nilai Pancasila,
-                dan membangun semangat gotong royong di antara masyarakat RT III Karema Utara.
+                Acara ini bertujuan untuk mempererat tali persaudaraan,
+                melestarikan nilai-nilai Pancasila, dan membangun semangat
+                gotong royong di antara masyarakat RT III Karema Utara.
               </p>
             </div>
 
@@ -91,10 +94,14 @@ const About: React.FC = () => {
                   viewport={{ once: true }}
                   variants={zoomIn}
                 >
-                  <div className={`${item.bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <div
+                    className={`${item.bg} w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4`}
+                  >
                     {item.icon}
                   </div>
-                  <h3 className="text-white font-semibold mb-2">{item.title}</h3>
+                  <h3 className="text-white font-semibold mb-2">
+                    {item.title}
+                  </h3>
                   <p className="text-gray-400 text-sm">{item.desc}</p>
                 </motion.div>
               ))}
@@ -117,7 +124,9 @@ const About: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
-                <h3 className="text-white text-xl font-bold mb-2">Kemerdekaan Indonesia</h3>
+                <h3 className="text-white text-xl font-bold mb-2">
+                  Kemerdekaan Indonesia
+                </h3>
                 <p className="text-gray-200 text-sm">
                   17 Agustus 1945 - Proklamasi Kemerdekaan Republik Indonesia
                 </p>

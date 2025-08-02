@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { Calendar, MapPin, Users } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { Calendar, MapPin, Users } from "lucide-react";
 
 const Hero = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   });
 
   useEffect(() => {
-    const targetDate = new Date('2025-08-17T00:00:00');
+    const targetDate = new Date("2025-08-17T00:00:00");
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -19,9 +19,11 @@ const Hero = () => {
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          ),
           minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((distance % (1000 * 60)) / 1000)
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
         });
       } else {
         // Jika sudah lewat tanggalnya
@@ -29,7 +31,7 @@ const Hero = () => {
           days: 0,
           hours: 0,
           minutes: 0,
-          seconds: 0
+          seconds: 0,
         });
       }
     }, 1000);
@@ -38,7 +40,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="beranda"  className=" relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden pt-24 md:pt-8">
+    <section
+      id="beranda"
+      className=" relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-black overflow-hidden pt-24 md:pt-8"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -65,15 +70,26 @@ const Hero = () => {
 
         {/* Countdown Timer */}
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-yellow-400 mb-6">Countdown Menuju Kemerdekaan</h3>
+          <h3 className="text-2xl font-semibold text-yellow-400 mb-6">
+            Countdown Menuju Kemerdekaan
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
             {Object.entries(timeLeft).map(([unit, value]) => (
-              <div key={unit} className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
-                <div className="text-3xl md:text-4xl font-bold text-red-500 mb-2">{value}</div>
+              <div
+                key={unit}
+                className="bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
+              >
+                <div className="text-3xl md:text-4xl font-bold text-red-500 mb-2">
+                  {value}
+                </div>
                 <div className="text-gray-400 text-sm uppercase tracking-wide">
-                  {unit === 'days' ? 'Hari' :
-                    unit === 'hours' ? 'Jam' :
-                      unit === 'minutes' ? 'Menit' : 'Detik'}
+                  {unit === "days"
+                    ? "Hari"
+                    : unit === "hours"
+                      ? "Jam"
+                      : unit === "minutes"
+                        ? "Menit"
+                        : "Detik"}
                 </div>
               </div>
             ))}
