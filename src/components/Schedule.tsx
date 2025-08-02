@@ -1,19 +1,19 @@
-import { Calendar, Clock, MapPin, Users } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { Calendar, Clock, MapPin, Users } from "lucide-react";
+import { motion } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
   show: {
     transition: {
       staggerChildren: 0.15,
-      delayChildren: 0.2
-    }
-  }
+      delayChildren: 0.2,
+    },
+  },
 };
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
 const Schedule = () => {
@@ -23,33 +23,56 @@ const Schedule = () => {
       date: "17 Agustus 2025",
       events: [
         { time: "16:00", activity: "Lomba Tiup Gelas", location: "Area Lomba" },
-        { time: "17:00", activity: "Lomba Estafet Tepung", location: "Area Lomba" },
-      ]
+        {
+          time: "17:00",
+          activity: "Lomba Estafet Tepung",
+          location: "Area Lomba",
+        },
+      ],
     },
     {
       day: "Sabtu",
       date: "18 Agustus 2025",
       events: [
         { time: "08:00", activity: "Lomba Tiup Gelas", location: "Area Lomba" },
-        { time: "09:30", activity: "Lomba Estafet Tepung", location: "Area Lomba" },
-        { time: "16:00", activity: "Lomba Mengaitkan Kawat Ketali", location: "Area Lomba" },
-        { time: "17:00", activity: "Lomba Mengeluarkan Bola dalam Karton", location: "Area Lomba" }
-      ]
+        {
+          time: "09:30",
+          activity: "Lomba Estafet Tepung",
+          location: "Area Lomba",
+        },
+        {
+          time: "16:00",
+          activity: "Lomba Mengaitkan Kawat Ketali",
+          location: "Area Lomba",
+        },
+        {
+          time: "17:00",
+          activity: "Lomba Mengeluarkan Bola dalam Karton",
+          location: "Area Lomba",
+        },
+      ],
     },
     {
       day: "Minggu",
       date: "19 Agustus 2025",
       events: [
-        { time: "10:00", activity: "Lomba Pukul Bantal", location: "Area Lomba" },
-        { time: "17:10", activity: "Lomba Panjat Pinang", location: "Area Lomba" }
-      ]
-    }
+        {
+          time: "10:00",
+          activity: "Lomba Pukul Bantal",
+          location: "Area Lomba",
+        },
+        {
+          time: "17:10",
+          activity: "Lomba Panjat Pinang",
+          location: "Area Lomba",
+        },
+      ],
+    },
   ];
 
   return (
-    <section id='jadwal-lokasi' className="py-20 bg-gray-800">
+    <section id="jadwal-lokasi" className="py-20 bg-gray-800">
       <div className="max-w-7xl mx-auto px-4">
-
         {/* Header */}
         <motion.div
           className="text-center mb-16"
@@ -63,7 +86,8 @@ const Schedule = () => {
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-red-500 to-yellow-500 mx-auto mb-8"></div>
           <p className="text-gray-300 text-lg max-w-3xl mx-auto">
-            Rangkaian acara perayaan HUT RI ke-80 selama tiga hari penuh dengan berbagai kegiatan menarik
+            Rangkaian acara perayaan HUT RI ke-80 selama tiga hari penuh dengan
+            berbagai kegiatan menarik
           </p>
         </motion.div>
 
@@ -81,12 +105,20 @@ const Schedule = () => {
                 <MapPin className="w-8 h-8 text-red-500" />
                 Lokasi Acara
               </h3>
-              <p className="text-xl text-yellow-400 font-semibold mb-2">Lorong Landaang Karema Utara</p>
+              <p className="text-xl text-yellow-400 font-semibold mb-2">
+                Lorong Landaang Karema Utara
+              </p>
               <p className="text-gray-300 mb-4">RT III, Karema Utara, Mamuju</p>
               <div className="flex flex-wrap gap-4 text-sm">
-                <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full">Lomba Seru</span>
-                <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">Hiburan Rakyat</span>
-                <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">Suasana Kekeluargaan</span>
+                <span className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full">
+                  Lomba Seru
+                </span>
+                <span className="bg-yellow-500/20 text-yellow-400 px-3 py-1 rounded-full">
+                  Hiburan Rakyat
+                </span>
+                <span className="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">
+                  Suasana Kekeluargaan
+                </span>
               </div>
             </div>
             <div className="relative">
@@ -100,7 +132,6 @@ const Schedule = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl pointer-events-none" />
             </div>
-
           </div>
         </motion.div>
 
@@ -113,20 +144,31 @@ const Schedule = () => {
           viewport={{ once: true }}
         >
           {scheduleData.map((day, index) => (
-            <motion.div key={index} className="bg-gray-900/50 rounded-2xl border border-gray-700" variants={cardVariants}>
+            <motion.div
+              key={index}
+              className="bg-gray-900/50 rounded-2xl border border-gray-700"
+              variants={cardVariants}
+            >
               <div className="bg-gradient-to-r from-red-600 to-red-700 p-6 text-center">
-                <h3 className="text-2xl font-bold text-white mb-1">{day.day}</h3>
+                <h3 className="text-2xl font-bold text-white mb-1">
+                  {day.day}
+                </h3>
                 <p className="text-red-100 text-sm">{day.date}</p>
               </div>
               <div className="p-6 space-y-4">
                 {day.events.map((event, i) => (
-                  <div key={i} className="group hover:bg-gray-800/50 rounded-xl p-4 transition duration-300">
+                  <div
+                    key={i}
+                    className="group hover:bg-gray-800/50 rounded-xl p-4 transition duration-300"
+                  >
                     <div className="flex items-start gap-4">
                       <div className="bg-yellow-500/20 rounded-lg p-2 flex-shrink-0">
                         <Clock className="w-4 h-4 text-yellow-500" />
                       </div>
                       <div className="flex-1">
-                        <span className="text-yellow-400 font-bold text-sm">{event.time}</span>
+                        <span className="text-yellow-400 font-bold text-sm">
+                          {event.time}
+                        </span>
                         <h4 className="text-white font-semibold text-sm group-hover:text-yellow-400 transition-colors duration-300">
                           {event.activity}
                         </h4>
@@ -152,12 +194,32 @@ const Schedule = () => {
           viewport={{ once: true }}
         >
           {[
-            { icon: <Calendar className="w-8 h-8 text-red-500 mx-auto mb-3" />, title: 'Durasi', desc: '3 Hari Penuh' },
-            { icon: <Clock className="w-8 h-8 text-yellow-500 mx-auto mb-3" />, title: 'Waktu', desc: '08:00 - 17:40 WITA' },
-            { icon: <Users className="w-8 h-8 text-blue-500 mx-auto mb-3" />, title: 'Peserta', desc: 'Seluruh Warga' },
-            { icon: <MapPin className="w-8 h-8 text-green-500 mx-auto mb-3" />, title: 'Akses', desc: 'Mudah Dijangkau' },
+            {
+              icon: <Calendar className="w-8 h-8 text-red-500 mx-auto mb-3" />,
+              title: "Durasi",
+              desc: "3 Hari Penuh",
+            },
+            {
+              icon: <Clock className="w-8 h-8 text-yellow-500 mx-auto mb-3" />,
+              title: "Waktu",
+              desc: "08:00 - 17:40 WITA",
+            },
+            {
+              icon: <Users className="w-8 h-8 text-blue-500 mx-auto mb-3" />,
+              title: "Peserta",
+              desc: "Seluruh Warga",
+            },
+            {
+              icon: <MapPin className="w-8 h-8 text-green-500 mx-auto mb-3" />,
+              title: "Akses",
+              desc: "Mudah Dijangkau",
+            },
           ].map((item, index) => (
-            <motion.div key={index} className="bg-gray-900/50 rounded-xl p-6 text-center border border-gray-700" variants={cardVariants}>
+            <motion.div
+              key={index}
+              className="bg-gray-900/50 rounded-xl p-6 text-center border border-gray-700"
+              variants={cardVariants}
+            >
               {item.icon}
               <h4 className="text-white font-semibold mb-1">{item.title}</h4>
               <p className="text-gray-400 text-sm">{item.desc}</p>

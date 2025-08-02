@@ -1,6 +1,6 @@
 // import React from 'react';
 // import { Flag, Instagram, Facebook, Mail, MapPin, Phone } from 'lucide-react';
-import { Flag, Mail, MapPin, Phone } from 'lucide-react';
+import { Flag, Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -16,13 +16,16 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-white">HUT RI ke-80</h3>
-                <p className="text-red-400 text-sm">Pemuda RT III Karema Utara</p>
+                <p className="text-red-400 text-sm">
+                  Pemuda RT III Karema Utara
+                </p>
               </div>
             </div>
 
             <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-md">
-              Bersama-sama merayakan kemerdekaan Indonesia dengan semangat persatuan,
-              kedaulatan rakyat, dan cita-cita Indonesia yang sejahtera dan maju.
+              Bersama-sama merayakan kemerdekaan Indonesia dengan semangat
+              persatuan, kedaulatan rakyat, dan cita-cita Indonesia yang
+              sejahtera dan maju.
             </p>
 
             {/* <div className="flex gap-4">
@@ -43,36 +46,53 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-6">Menu Cepat</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#beranda" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm">
+                <a
+                  href="#beranda"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm"
+                >
                   Beranda
                 </a>
               </li>
               <li>
-                <a href="#tentang-acara" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm">
+                <a
+                  href="#tentang-acara"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm"
+                >
                   Tentang Acara
                 </a>
               </li>
               <li>
-                <a href="#jenis-lomba" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm">
+                <a
+                  href="#jenis-lomba"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm"
+                >
                   Jenis Lomba
                 </a>
               </li>
               <li>
-                <a href="#jadwal-lokasi" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm">
+                <a
+                  href="#jadwal-lokasi"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm"
+                >
                   Jadwal & Lokasi
                 </a>
               </li>
               <li>
-                <a href="#dokumentasi" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm">
+                <a
+                  href="#dokumentasi"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm"
+                >
                   Dokumentasi
                 </a>
               </li>
               <li>
-                <a href="#support" className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm">
+                <a
+                  href="#support"
+                  className="text-gray-400 hover:text-yellow-400 transition-colors duration-300 text-sm"
+                >
                   Dukung Kami
                 </a>
               </li>
-
             </ul>
           </div>
 
@@ -83,8 +103,12 @@ const Footer = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" />
                 <div>
-                  <p className="text-gray-400 text-sm">Lorong Landaang Karema Utara</p>
-                  <p className="text-gray-500 text-xs">RT III, Kel. Karema, Mamuju</p>
+                  <p className="text-gray-400 text-sm">
+                    Lorong Landaang Karema Utara
+                  </p>
+                  <p className="text-gray-500 text-xs">
+                    RT III, Kel. Karema, Mamuju
+                  </p>
                 </div>
               </div>
 
@@ -117,9 +141,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-            <p className="text-gray-500 text-sm">
-              © 2025 Muhammad Makbul N
-            </p>
+            <p className="text-gray-500 text-sm">© 2025 Muhammad Makbul N</p>
 
             <div className="flex items-center gap-4 text-xs text-gray-600">
               <span>Made with ❤️ for Indonesia</span>
