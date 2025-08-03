@@ -34,12 +34,6 @@ const Schedule = () => {
       day: "Sabtu",
       date: "18 Agustus 2025",
       events: [
-        { time: "08:00", activity: "Lomba Tiup Gelas", location: "Area Lomba" },
-        {
-          time: "09:30",
-          activity: "Lomba Estafet Tepung",
-          location: "Area Lomba",
-        },
         {
           time: "16:00",
           activity: "Lomba Mengaitkan Kawat Ketali",

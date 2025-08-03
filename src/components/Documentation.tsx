@@ -19,14 +19,14 @@ const photos = [
     description: "Pemuda Karema Utara berpartisipasi aktif",
   },
   {
-    url: "/img/documentation/pemuda-merah-putih.jpg",
-    title: "Hiburan Rakyat",
-    description: "Pertunjukan seni budaya lokal yang memukau",
-  },
-  {
     url: "/img/documentation/pemuda-merah-putih-dua.jpg",
     title: "Pembagian Hadiah",
     description: "Momen bahagia para pemenang lomba",
+  },
+  {
+    url: "/img/documentation/pemuda-merah-putih.jpg",
+    title: "Bersatu untuk Indonesia",
+    description: "Pemuda RT III Karema Utara merayakan kemerdekaan",
   },
   {
     url: "/img/documentation/bendera-panjat-pinang.webp",

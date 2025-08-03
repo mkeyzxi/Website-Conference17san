@@ -1,5 +1,5 @@
-import React from "react";
-import { Trophy, Target, Zap, Box, Wind, Globe } from "lucide-react";
+// import React from "react";
+import { Trophy, Target, Zap, Box, Wind, GlassWater } from "lucide-react";
 import { motion, Variants, Easing } from "framer-motion";
 
 const easeOutExpo: Easing = [0.25, 0.1, 0.25, 1];
@@ -66,7 +66,7 @@ const Competitions = () => {
     },
     {
       name: "Tiup Gelas",
-      icon: Globe,
+      icon: GlassWater,
       description:
         "Lomba meniup gelas hingga bergerak sejauh mungkin dengan napas",
       bgColor: "from-orange-500/20 to-orange-600/20",
