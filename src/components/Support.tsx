@@ -88,7 +88,7 @@ const Support = () => {
 
             <div className="relative">
               <img
-                src="/img/documentation/bendera-panjat-pinang.webp"
+                src="/img/17Agustus.jpg"
                 alt="Community Support"
                 className="w-full h-80 object-cover rounded-2xl"
               />
