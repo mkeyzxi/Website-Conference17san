@@ -117,7 +117,7 @@ const Schedule = () => {
             </div>
             <div className="relative">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!4v1754076756892!6m8!1m7!1ssjwCy3pmINH1QMm9iSVSpQ!2m2!1d-2.683284861810347!2d118.8746494103789!3f342.44595614748204!4f-16.355976896114726!5f0.7820865974627469"
+                src="https://www.google.com/maps/embed?pb=!4v1754320122493!6m8!1m7!1s51ITkRGeFlgBrxx5ElPOmg!2m2!1d-2.682181254960168!2d118.8752705402151!3f235.05744055776333!4f-4.905640313502047!5f0.7820865974627469"
                 className="w-full h-64 rounded-xl"
                 style={{ border: 0 }}
                 allowFullScreen
@@ -126,6 +126,7 @@ const Schedule = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-xl pointer-events-none" />
             </div>
+
           </div>
         </motion.div>
 
