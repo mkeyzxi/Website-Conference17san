@@ -19,46 +19,76 @@ const cardVariants = {
 const Schedule = () => {
   const scheduleData = [
     {
-      day: "Jumat",
-      date: "17 Agustus 2025",
-      events: [
-        { time: "16:00", activity: "Lomba Tiup Gelas", location: "Area Lomba" },
-        {
-          time: "17:00",
-          activity: "Lomba Estafet Tepung",
-          location: "Area Lomba",
-        },
-      ],
-    },
-    {
-      day: "Sabtu",
+      day: "Senin",
       date: "18 Agustus 2025",
       events: [
         {
           time: "16:00",
-          activity: "Lomba Mengaitkan Kawat Ketali",
-          location: "Area Lomba",
+          activity: "Lomba Makan Kerupuk",
+          location: "Lapangan 1 - Lorong Landa'ang 01 RT 03 Karema",
         },
         {
-          time: "17:00",
-          activity: "Lomba Mengeluarkan Bola dalam Karton",
-          location: "Area Lomba",
+          time: "16:00",
+          activity: "Lomba Mengaitkan Kawat",
+          location: "Lapangan 1 - Lorong Landa'ang 01 RT 03 Karema",
+        },
+        {
+          time: "16:30",
+          activity: "Lomba Mengeluarkan Bola dalam Kardus",
+          location: "Lapangan 2 - Lorong Landa'ang 01 RT 03 Karema",
         },
       ],
     },
     {
-      day: "Minggu",
+      day: "Selasa",
       date: "19 Agustus 2025",
       events: [
         {
-          time: "10:00",
-          activity: "Lomba Pukul Bantal",
-          location: "Area Lomba",
+          time: "16:00",
+          activity: "Lomba Tangkap Itik",
+          location: "Lapangan 1 - Lorong Landa'ang 01 RT 03 Karema",
         },
         {
-          time: "17:10",
+          time: "16:00",
+          activity: "Lomba Estafet Terigu",
+          location: "Lapangan 2 - Lorong Landa'ang 01 RT 03 Karema",
+        },
+        {
+          time: "16:30",
+          activity: "Lomba Estafet Sarung Ibu-Ibu",
+          location: "Lapangan 1 - Lorong Landa'ang 01 RT 03 Karema",
+        },
+        {
+          time: "16:30",
+          activity: "Joget Balon Suami Istri",
+          location: "Lapangan 2 - Lorong Landa'ang 01 RT 03 Karema",
+        },
+        {
+          time: "17:00",
+          activity: "Melempar Bola ke Dalam Dos (Dewasa)",
+          location: "Lapangan 1 - Lorong Landa'ang 01 RT 03 Karema",
+        },
+      ],
+    },
+    {
+      day: "Rabu",
+      date: "20 Agustus 2025",
+      events: [
+        {
+          time: "16:00",
           activity: "Lomba Panjat Pinang",
-          location: "Area Lomba",
+          location: "Lapangan 1 - Lorong Landa'ang 01 RT 03 Karema",
+        },
+      ],
+    },
+    {
+      day: "Kamis",
+      date: "21 Agustus 2025",
+      events: [
+        {
+          time: "16:00",
+          activity: "Opsi (Lomba Tambahan/Final jika ada)",
+          location: "Lapangan 1 - Lorong Landa'ang 01 RT 03 Karema",
         },
       ],
     },
@@ -192,17 +222,17 @@ const Schedule = () => {
             {
               icon: <Calendar className="w-8 h-8 text-red-500 mx-auto mb-3" />,
               title: "Durasi",
-              desc: "3 Hari Penuh",
+              desc: "3 Hari",
             },
             {
               icon: <Clock className="w-8 h-8 text-yellow-500 mx-auto mb-3" />,
               title: "Waktu",
-              desc: "08:00 - 17:40 WITA",
+              desc: "16:00 - 17:40 WITA",
             },
             {
               icon: <Users className="w-8 h-8 text-blue-500 mx-auto mb-3" />,
               title: "Peserta",
-              desc: "Seluruh Warga",
+              desc: "Seluruh Warga Karema Utara",
             },
             {
               icon: <MapPin className="w-8 h-8 text-green-500 mx-auto mb-3" />,

@@ -1,5 +1,5 @@
 // import React from "react";
-import { Trophy, Target, Zap, Box, Wind, GlassWater } from "lucide-react";
+import { Trophy, Hand, Zap, Box, Wind, BrainCog } from "lucide-react";
 import { motion, Variants, Easing } from "framer-motion";
 
 const easeOutExpo: Easing = [0.25, 0.1, 0.25, 1];
@@ -29,16 +29,16 @@ const Competitions = () => {
       borderColor: "border-red-500/30",
     },
     {
-      name: "Pukul Bantal",
-      icon: Target,
+      name: "Tangkap Itik",
+      icon: Hand,
       description:
-        "Pertarungan seru di atas balok kayu dengan bantal sebagai senjata",
+        "Menangkap itik dengan kecepatan dan ketepatan mengutamakan akurasi",
       bgColor: "from-yellow-500/20 to-yellow-600/20",
       iconColor: "text-yellow-500",
       borderColor: "border-yellow-500/30",
     },
     {
-      name: "Mengaitkan Kawat Ketali",
+      name: "Mengaitkan Kawat",
       icon: Zap,
       description:
         "Lomba keterampilan mengaitkan kawat dengan ketepatan tinggi",
@@ -47,10 +47,10 @@ const Competitions = () => {
       borderColor: "border-blue-500/30",
     },
     {
-      name: "Mengeluarkan Bola dalam Karton",
+      name: "Mengeluarkan Bola dalam Kardus",
       icon: Box,
       description:
-        "Tantangan mengeluarkan bola dari dalam karton dengan strategi cerdik",
+        "Tantangan mengeluarkan bola dari dalam Kardus dengan strategi cerdik",
       bgColor: "from-green-500/20 to-green-600/20",
       iconColor: "text-green-500",
       borderColor: "border-green-500/30",
@@ -65,8 +65,8 @@ const Competitions = () => {
       borderColor: "border-purple-500/30",
     },
     {
-      name: "Tiup Gelas",
-      icon: GlassWater,
+      name: "Makan Kerupuk",
+      icon: BrainCog,
       description:
         "Lomba meniup gelas hingga bergerak sejauh mungkin dengan napas",
       bgColor: "from-orange-500/20 to-orange-600/20",
@@ -164,7 +164,7 @@ const Competitions = () => {
               </div>
               <div>
                 <div className="text-3xl font-bold text-yellow-500 mb-2">
-                  17 AUG
+                  Sebelum Perlombaan
                 </div>
                 <p className="text-gray-300 text-sm">Batas Pendaftaran</p>
               </div>
