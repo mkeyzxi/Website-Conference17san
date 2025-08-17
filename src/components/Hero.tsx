@@ -100,7 +100,7 @@ const Hero = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           <div className="flex items-center justify-center gap-3 text-gray-300">
             <Calendar className="w-5 h-5 text-red-500" />
-            <span>17-19 Agustus 2025</span>
+            <span>17-20 Agustus 2025</span>
           </div>
           <div className="flex items-center justify-center gap-3 text-gray-300">
             <MapPin className="w-5 h-5 text-yellow-500" />
